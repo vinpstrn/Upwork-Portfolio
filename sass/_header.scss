@@ -1,0 +1,60 @@
+@use './variables' as v;
+
+.header {
+  padding: 4.5rem 0;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  background-color: v.$gray-light;
+  border-radius: 4.4rem;
+  padding: 2.5rem 5rem;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 6.8rem;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: v.$gray;
+    transition: all .2s;
+
+    &:hover {
+      color: v.$blue;
+    }
+
+    &--contact {
+      background-color: v.$blue;
+      color: v.$white;
+      padding: 1rem 3.5rem;
+      border-radius: 2.3rem;
+      border: .2rem solid v.$blue;
+      transition: all .2s;
+
+      &:hover {
+        background-color: transparent;
+        border: .2rem solid v.$blue;
+        color: v.$blue;
+      }
+    }
+
+  }
+}
+
+.active {
+  font-weight: bold;
+  color: v.$blue;
+}
