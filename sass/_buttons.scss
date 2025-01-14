@@ -1,0 +1,23 @@
+@use './variables' as v;
+
+
+.btn {
+  background-color: v.$blue;
+  color: v.$white;
+  padding: 1rem 3.5rem;
+  border-radius: 2.3rem;
+  border: .2rem solid v.$blue;
+  transition: all .2s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    border: .2rem solid v.$blue;
+    color: v.$blue;
+  }
+
+  &--upwork {
+    
+    align-self: flex-start;
+  }
+}

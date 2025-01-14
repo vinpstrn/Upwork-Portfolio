@@ -1,0 +1,13 @@
+@use './variables' as v;
+
+.services, .projects, .contact {
+
+  &::before {
+    content: '';
+    position: absolute; /* Make the line fixed at the top */
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 1px;
+    background-color: v.$gray-light-4;
+  }
+}

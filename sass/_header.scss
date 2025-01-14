@@ -2,16 +2,19 @@
 
 .header {
   padding: 4.5rem 0;
-  
   display: flex;
   justify-content: space-between;
+  
+  &__logo {
+    align-self: center;
+  }
 }
 
 .nav {
   background-color: v.$gray-light;
   border-radius: 4.4rem;
-  padding: 2.5rem 5rem;
-  align-self: center;
+  padding: 1.3rem 5.25rem;
+  align-self: stretch;
 
   display: flex;
   align-items: center;
@@ -36,21 +39,51 @@
       color: v.$blue;
     }
 
-    &--contact {
-      background-color: v.$blue;
-      color: v.$white;
-      padding: 1rem 3.5rem;
-      border-radius: 2.3rem;
-      border: .2rem solid v.$blue;
-      transition: all .2s;
+  }
+}
 
-      &:hover {
-        background-color: transparent;
-        border: .2rem solid v.$blue;
-        color: v.$blue;
-      }
-    }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+  height: calc(100vh - 16.7rem);
+  padding: 0 4rem;
 
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    max-width: 51rem;
+    padding-bottom: 15rem;
+    gap: 2rem;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    line-height: 4.25rem;
+    font-weight: normal;
+    color: v.$black;
+  }
+
+  &__name {
+    font-weight: bold;
+    color: v.$blue;
+  }
+
+  &__role {
+    display: block;
+    font-weight: bold;
+  } 
+
+  &__description {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 71.4rem;
+    height: auto;
   }
 }
 

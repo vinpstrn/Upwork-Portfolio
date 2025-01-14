@@ -12,31 +12,35 @@
 <body>
     <div class="container">
       <header class="header">
-        <img src="img/logo.svg" alt="">
+        <div class="header__logo-container">
+          <img class="header__logo" src="img/logo.svg" alt="">
+        </div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link active" href="#" target="_blank">Home</a></li>
             <li class="nav__item"><a class="nav__link" href="#" target="_blank">Services</a></li>
             <li class="nav__item"><a class="nav__link" href="#" target="_blank">Projects</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--contact" href="#" target="_blank">Contact me</a></li>
+            <li class="nav__item"><a class="btn btn--contact" href="#" target="_blank">Contact me</a></li>
           </ul>
         </nav>
       </header>
       <section class="hero">
         <div class="hero__textbox">
           <h1 class="hero__heading">
-            <span>HI! I’m Vin Pastrana</span>
-            <span>HTML Email Developer</span>
+            <div>Hi! I’m <span class="hero__name">Vin Pastrana</span></div>
+            <span class="hero__role">HTML Email Developer</span>
           </h1>
-          <h2 class="hero__description">
+          <p class="hero__description">
             Delivering responsive, hand-coded emails
             with 5+ years of industry experience.
-          </h2>
-          <a href="#" class="btn">Hire Me On Upwork</a>
+          </p>
+          <a href="#" class="btn btn--upwork" aria-label="Hire Me On Upwork">Hire Me On Upwork</a>
         </div>
-        <img src="img/hero-img.png" alt="" class="hero__img">
+        <div class="hero__img-container">
+          <img class="hero__img" src="img/hero-img.png" alt="">
+        </div>
       </section>
-      <main>
+      <main class="main">
         <section class="services">Services</section>
         <section class="projects">Projects</section>
         <section class="contact">Contact</section>

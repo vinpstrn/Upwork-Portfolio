@@ -3,12 +3,15 @@
   display: flex;
   justify-content: space-between;
 }
+.header__logo {
+  align-self: center;
+}
 
 .nav {
   background-color: #F9FBFE;
   border-radius: 4.4rem;
-  padding: 2.5rem 5rem;
-  align-self: center;
+  padding: 1.3rem 5.25rem;
+  align-self: stretch;
   display: flex;
   align-items: center;
 }
@@ -29,23 +32,67 @@
 .nav__link:hover {
   color: #0069FF;
 }
-.nav__link--contact {
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+  height: calc(100vh - 16.7rem);
+  padding: 0 4rem;
+}
+.hero__textbox {
+  display: flex;
+  flex-direction: column;
+  max-width: 51rem;
+  padding-bottom: 15rem;
+  gap: 2rem;
+}
+.hero__heading {
+  font-size: 4rem;
+  line-height: 4.25rem;
+  font-weight: normal;
+  color: #090814;
+}
+.hero__name {
+  font-weight: bold;
+  color: #0069FF;
+}
+.hero__role {
+  display: block;
+  font-weight: bold;
+}
+.hero__description {
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+}
+.hero__img {
+  width: 100%;
+  max-width: 71.4rem;
+  height: auto;
+}
+
+.active {
+  font-weight: bold;
+  color: #0069FF;
+}
+
+.btn {
   background-color: #0069FF;
   color: #ffffff;
   padding: 1rem 3.5rem;
   border-radius: 2.3rem;
   border: 0.2rem solid #0069FF;
   transition: all 0.2s;
+  text-decoration: none;
 }
-.nav__link--contact:hover {
+.btn:hover {
   background-color: transparent;
   border: 0.2rem solid #0069FF;
   color: #0069FF;
 }
-
-.active {
-  font-weight: bold;
-  color: #0069FF;
+.btn--upwork {
+  align-self: flex-start;
 }
 
 *,
@@ -68,10 +115,19 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 192rem;
+  width: 100%;
   margin: 0 auto;
   padding: 0 14.2rem;
+}
+
+.services::before, .projects::before, .contact::before {
+  content: "";
+  position: absolute; /* Make the line fixed at the top */
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 1px;
+  background-color: #f1f1f1;
 }
 
 /*# sourceMappingURL=style.css.map */
