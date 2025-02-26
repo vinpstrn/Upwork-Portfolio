@@ -1,0 +1,49 @@
+@use './variables' as v;
+
+.card {
+  max-width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & > *:not(:first-child) {
+    padding: 3rem;
+  }
+
+  &__header {
+    background-color: v.$blue;
+    border-radius: 3rem 3rem 0 0;
+  }
+
+  &__title {
+    padding: 2rem 3rem;
+    color: v.$white;
+  }
+
+  &__content {
+    border: 1px solid v.$blue;
+    border-radius: 0 0 3rem 3rem;
+    min-height: 60rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 31.3rem;
+    height: auto;
+
+    &-container {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__list {
+    list-style-position: inside;
+    text-align: left;
+  }
+
+  &__item {
+    text-indent: -2.25rem;
+    padding-left: 2.25rem;
+    padding-bottom: 1.5rem;
+  }
+}

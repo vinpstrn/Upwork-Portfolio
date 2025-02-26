@@ -1,13 +1,53 @@
 @use './variables' as v;
 
 .services, .projects, .contact {
+  border-top: 1px solid v.$gray-light-4;
+  position: relative;
+  text-align: center;
+  padding: 7rem 0 15rem 0;
 
+    
   &::before {
-    content: '';
-    position: absolute; /* Make the line fixed at the top */
-    left: 0;
-    width: 100vw; /* Full width of the viewport */
-    height: 1px;
-    background-color: v.$gray-light-4;
+    position: absolute;
+    content: "";
+    top: 7rem;
+    left: -10rem;
+    width: 11.4rem;
+    height: 7.1rem;
+    background-image: url('../img/blocks-design.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 20rem;
+    right: -10rem;
+    width: 11.4rem;
+    height: 7.1rem;
+    background-image: url('../img/blocks-design.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.services {
+  max-height: 100vh;
+  text-align: center;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+  }
+
+
+}
+
+.title {
+  padding-bottom: 10rem;
 }

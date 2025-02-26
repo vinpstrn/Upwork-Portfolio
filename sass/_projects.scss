@@ -1,0 +1,74 @@
+@use './variables' as v;
+
+.projects {
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.8rem 3rem;
+    gap: 7rem;
+    background-color: v.$gray-light;
+    width: 65.5rem;
+    margin: 0 auto;
+    border-radius: 4.4rem;
+  }
+
+  &__tab-btn {
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: v.$gray;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all .2s ease;
+
+    &--active {
+      color: v.$blue;
+      font-weight: bold;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -.3rem;
+        left: 0;
+        width: 100%;
+        height: .3rem;
+        background-color: v.$blue;
+      }
+    }
+  }
+
+  &__content-container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding-top: 7.5rem;
+  }
+
+  &__content {
+    display: none;
+
+    &--active {
+      width: 130rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(37.5rem, 1fr));
+      justify-content: center;
+      grid-gap: 4rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    background-color: v.$gray-light;
+    height: 37.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
